@@ -16,18 +16,20 @@ import modelo.Proyecto;
  * @author Erika
  */
 public class VistaProyecto {
-     public Scanner s;
     private ControladorJefeProyecto controladorJefeProyecto;
     private ControladorProyecto controladorProyecto;
     private ControladorPlano controladorPlano;
     private VistaJefeProyecto vistaJefeProyecto;
     private VistaPlano vistaPlano;
+    Scanner s= new Scanner(System.in);
     
-   public VistaProyecto(ControladorJefeProyecto controladorJefeProyecto,ControladorProyecto controladorProyecto,ControladorPlano controladorPlano ){
-        s= new Scanner(System.in);
-        this.controladorJefeProyecto= new ControladorJefeProyecto();
-        this.controladorProyecto=new ControladorProyecto();
-        this.controladorPlano=new ControladorPlano();
+   public VistaProyecto( ){
+        controladorJefeProyecto= new ControladorJefeProyecto();
+        controladorProyecto=new ControladorProyecto();
+        controladorPlano=new ControladorPlano();
+        this.controladorJefeProyecto= controladorJefeProyecto;
+        this.controladorProyecto= controladorProyecto;
+        this.controladorPlano= controladorPlano;
     }
 
      public void menu() {
@@ -48,20 +50,7 @@ public class VistaProyecto {
             }
         }
     }
-  /*  public void menu(){
-        int opcion = 0;
-        do {            
-            System.out.println(" 1. Crear \n 2. Actualizar \n 3. Buscar \n 4. Eliminar \n 5. Listar \n 6. Salir");
-            opcion = s.nextInt();
-            switch(opcion){
-                case 1: this.crear(); break;
-                case 2: this.actualizar(); break;
-                case 3: this.buscar(); break;
-                case 4: this.eliminar(); break;
-                case 5: this.listar(); break;
-            }
-        } while (opcion < 6);
-    }*/
+
     public Proyecto crear(){
         System.out.println("Ingrese: \n Nombre:");
         s.nextLine();

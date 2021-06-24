@@ -16,16 +16,17 @@ import modelo.Plano;
  * @author Erika
  */
 public class VistaPlano {
-    public Scanner s;
     private ControladorPlano controladorPlano;
     DateFormat formatoFecha=new SimpleDateFormat("dd/mm/yyyy");
-   
+    Scanner s = new Scanner(System.in);
     
-    public VistaPlano(ControladorPlano controladorPlano){
-        s = new Scanner(System.in);
-        this.controladorPlano = new ControladorPlano();
+    public VistaPlano(){
+        controladorPlano=new ControladorPlano();
+        
+        this.controladorPlano =controladorPlano;
 
     }
+   
       public void menu() {
         int op = 1;
         while (op > 0) {

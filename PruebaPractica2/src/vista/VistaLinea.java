@@ -14,14 +14,15 @@ import modelo.Linea;
  * @author Erika
  */
 public class VistaLinea {
-    public Scanner s;
+    Scanner s = new Scanner(System.in);
     private ControladorLinea controladorLinea;
     
-    public VistaLinea(ControladorLinea controladorLinea){
-        s = new Scanner(System.in);
-        this.controladorLinea= new ControladorLinea();
+    public VistaLinea(){
+      controladorLinea=new  ControladorLinea();
+       this.controladorLinea= controladorLinea;
  
     }
+    
       public void menu() {
         int op = 1;
         while (op > 0) {
@@ -40,20 +41,7 @@ public class VistaLinea {
             }
         }
     }
-  /*  public void menu(){
-        int opcion = 0;
-        do {            
-            System.out.println(" 1. Crear \n 2. Actualizar \n 3. Buscar \n 4. Eliminar \n 5. Listar \n 6. Salir");
-            opcion = s.nextInt();
-            switch(opcion){
-                case 1: this.crear(); break;
-                case 2: this.actualizar(); break;
-                case 3: this.buscar(); break;
-                case 4: this.eliminar(); break;
-                case 5: this.listar(); break;
-            }
-        } while (opcion < 6);
-    }*/
+  
     public Linea crear(){
         
         System.out.println("Ingrese: \n Longuitud:");        

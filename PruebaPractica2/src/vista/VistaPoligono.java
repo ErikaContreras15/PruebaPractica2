@@ -14,12 +14,14 @@ import modelo.Poligono;
  * @author Erika
  */
 public class VistaPoligono {
-    public Scanner s;
+    Scanner   s = new Scanner(System.in);
     private ControladorrPoligono controladorrPoligono;
-    public VistaPoligono(ControladorrPoligono controladorrPoligono){
-        s = new Scanner(System.in);
-        this.controladorrPoligono =new  ControladorrPoligono();
+    
+    public VistaPoligono(){
+      controladorrPoligono=new ControladorrPoligono();
+        this.controladorrPoligono= controladorrPoligono;
     }
+  
       public void menu() {
         int op = 1;
         while (op > 0) {
@@ -38,20 +40,6 @@ public class VistaPoligono {
             }
         }
     }
-   /* public void menu(){
-        int opcion = 0;
-        do {            
-            System.out.println(" 1. Crear \n 2. Actualizar \n 3. Buscar \n 4. Eliminar \n 5. Listar \n 6. Salir");
-            opcion = s.nextInt();
-            switch(opcion){
-                case 1: this.crear(); break;
-                case 2: this.actualizar(); break;
-                case 3: this.buscar(); break;
-                case 4: this.eliminar(); break;
-                case 5: controladorrPoligono.listar();
-            }
-        } while (opcion < 6);
-    }*/
     public Poligono crear(){
         System.out.println("Ingrese: \n Num_Lineas");
         s.nextLine();

@@ -14,7 +14,9 @@ public class Inicio {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        VistaGeneral vistaGeneral = new VistaGeneral();
-        vistaGeneral.menu();
-    }
+       
+        VistaGeneral vg = new VistaGeneral();
+        vg.menu();
+        
+                  }
 }

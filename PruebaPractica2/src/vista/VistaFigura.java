@@ -14,14 +14,15 @@ import modelo.Figura;
  * @author Erika
  */
 public class VistaFigura {
-     public Scanner s;
     private ControladorFigura controladorFigura;
+    Scanner s = new Scanner(System.in);
 
-    public VistaFigura(ControladorFigura controladorFigura){
-        s = new Scanner(System.in);
-        this.controladorFigura =new ControladorFigura();
+    public VistaFigura(){
+       controladorFigura= new ControladorFigura();
+        this.controladorFigura = controladorFigura;
        
     }
+
       public void menu() {
         int op = 1;
         while (op > 0) {
